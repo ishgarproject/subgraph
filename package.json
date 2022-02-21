@@ -1,0 +1,25 @@
+{
+  "name": "@ishgar/subgraph",
+  "version": "0.1.0",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ krouspy/IshgarSandbox",
+    "create-local": "graph create --node http://localhost:8020/ krouspy/IshgarSandbox",
+    "remove-local": "graph remove --node http://localhost:8020/ krouspy/IshgarSandbox",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 krouspy/IshgarSandbox",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.26.0",
+    "@graphprotocol/graph-ts": "0.24.1"
+  },
+  "devDependencies": {
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.{ts,md,json}": "prettier --write"
+  }
+}

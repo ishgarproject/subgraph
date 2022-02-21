@@ -1,0 +1,15 @@
+type NFT @entity {
+  id: ID!
+  owner: Bytes!
+  tokenId: BigInt!
+  tokenUri: String!
+  deposited: Boolean!
+  approvedAddress: Bytes!
+}
+
+type EtherDeposit @entity {
+  id: ID!
+  depositor: Bytes! # address
+  amountInWei: BigInt!
+  transactionHash: Bytes!
+}
